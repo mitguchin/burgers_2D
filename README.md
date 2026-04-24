@@ -74,3 +74,33 @@ A time-marching algorithm was implemented to observe the transition from initial
 * Memory Allocation: Pre-allocation of arrays for $u$, $v$, and their $(uf, vf)$ to store 500 time steps of data.
 
 * Iterative Loop: Nested spatial loops calculate the velocity update for every interior node $(i,j)$ based on the previous state ($u_n, v_n$).
+
+* Boundary Enforcement: Manual re-assignment of boundary values at the end of each time step to prevent numerical drift.
+
+---
+
+4. Result & Visulization
+
+The solver successfully captures the "smoothing" effect of the initial square pulse spreads and moves across the domain.
+
+* Initial State: Visualizes the sharp gradients of the square pulse using plt.contourf.
+
+* Time Evolution: Snapshots(e.g., at $t=30$) demonstrate how the initial square pulse spreads and moves across the domain.
+
+* Color Mapping: High-fidelity jet colormaps are used to scale velocity magnitudes, clearly showing the dissipation of kinetic energy over time.
+
+---
+
+5. Implemetation Details
+
+Framework: Pure Python/NumPy for numerical computation.
+
+* Key Libraries:*Numpy:
+Used for multi-dimensional array manipulation & grid generation.
+
+* Matplotlib/Seaborn:
+Utilized for generating scientific contour plots and heatmaps.
+
+* Hardware: Optimized for CPU-based oterative processing.
+
+* Precision: High-resolution time-stepping ($\Delta t = 0.001$) ensures the Courant-Friedrichs-Lewy(CFL) condition is satisfied for stability.
