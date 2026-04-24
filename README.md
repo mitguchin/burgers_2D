@@ -83,7 +83,52 @@ A time-marching algorithm was implemented to observe the transition from initial
 
 The solver successfully captures the "smoothing" effect of the initial square pulse spreads and moves across the domain.
 
-* Initial State: Visualizes the sharp gradients of the square pulse using plt.contourf.
+* **Initial State:**
+The simulation starts with a sharp square pulse for both $u$ & $v$ components.
+
+![Initial u]
+<img width="796" height="662" alt="1" src="https://github.com/user-attachments/assets/8fe86a92-e0d3-4dd7-bfce-008bb77fccc2" />
+
+![initial v]
+<img width="785" height="660" alt="2" src="https://github.com/user-attachments/assets/9b5447c8-2c03-49b9-8958-9dc3d2e093ad" />
+
+**Figure 1:** 
+Initial sharp gradients established at the start of the simulation.
+
+---
+
+* **Intermediate Transition:**
+As time progresses, the nonlinear convection terms move the pulse, while viscous diffusion begins to smooth the sharp edges.
+
+![Intermediate u]
+<img width="789" height="665" alt="5" src="https://github.com/user-attachments/assets/de9c5089-094d-43b0-bd51-a38e8fdfec08" />
+
+**Figure 2:** 
+Intermediate state showcasing the beginning of the smoothing effect.
+
+---
+
+* **Final State & Convergence:**
+ The pulse eventually evolves into a smooth bell-shaped distribution, demonstrating the dissipation of energy over time.
+
+
+![Final u]
+<img width="782" height="668" alt="3" src="https://github.com/user-attachments/assets/08b076c9-2e64-4327-b70c-6989ef0af016" />
+
+![Final v]
+<img width="790" height="664" alt="4" src="https://github.com/user-attachments/assets/5c949a56-cdd2-4e71-ac0e-0a86a237cdd1" />
+
+**Figure 3:**
+Final predicted velocity fields for $u$ & $v$ components. 
+
+---
+
+* **Reference Check:**
+Additional visulization confirms the consistency of the 2D flow field.
+
+![Final v Reference]
+<img width="790" height="664" alt="6" src="https://github.com/user-attachments/assets/3b3658c3-895a-4656-83fe-29e9a427debb" />
+
 
 * Time Evolution: Snapshots(e.g., at $t=30$) demonstrate how the initial square pulse spreads and moves across the domain.
 
