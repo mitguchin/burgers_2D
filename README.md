@@ -68,3 +68,9 @@ Solver Logic
 
 3. Solver Strategy
 
+A time-marching algorithm was implemented to observe the transition from initial disturbance to steady-state diffusion:
+
+
+* Memory Allocation: Pre-allocation of arrays for $u$, $v$, and their $(uf, vf)$ to store 500 time steps of data.
+
+* Iterative Loop: Nested spatial loops calculate the velocity update for every interior node $(i,j)$ based on the previous state ($u_n, v_n$).
